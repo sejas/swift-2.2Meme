@@ -28,7 +28,7 @@ class TableMemesViewController: UIViewController, UITableViewDataSource, UITable
         table.reloadData()
     }
     
-    //MARK Table
+    //MARK: Table
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("numberOfRowsInSection\(memes.count)")
         return memes.count
@@ -36,7 +36,7 @@ class TableMemesViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 //        let cell = tableView.cellForRowAtIndexPath(indexPath) as! TableMemesTableViewCell
         let cell = tableView.dequeueReusableCellWithIdentifier("memeCell") as! TableMemesTableViewCell
-        cell.imgMeme = memes[indexPath.row].img
+        cell.imgMeme.image = memes[indexPath.row].memeImg
         cell.lblTitle.text = memes[indexPath.row].textTop
         return cell
     }

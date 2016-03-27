@@ -130,6 +130,7 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
             if success {
                 // user confirmed, save the meme
                 self.saveMeme(memeImg)
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
         
