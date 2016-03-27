@@ -17,5 +17,16 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         imgMeme.image = meme.memeImg
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        // we hide tabbar
+        tabBarController?.tabBar.hidden = true
+    }
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        // we show tabbar before leave
+        tabBarController?.tabBar.hidden = false
+    }
 
 }

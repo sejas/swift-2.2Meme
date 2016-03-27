@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="74" y="736"/>
         </scene>
-        <!--Collection Meme View Controller-->
+        <!--Memes-->
         <scene sceneID="nFt-ca-tjF">
             <objects>
-                <viewController id="DH3-Ly-bGb" customClass="CollectionMemeViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Memes" id="DH3-Ly-bGb" customClass="CollectionMemeViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rbb-yL-s3u"/>
                         <viewControllerLayoutGuide type="bottom" id="cAx-0x-Vvy"/>
@@ -134,7 +134,7 @@
                             <constraint firstAttribute="trailing" secondItem="qBX-Sy-klT" secondAttribute="trailing" id="tNH-cd-1fW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="waf-Kd-wIC">
+                    <navigationItem key="navigationItem" title="Memes" id="waf-Kd-wIC">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ydo-5s-Sgy">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" identifier="toMemeEditor" id="4Dn-k2-qbi"/>
@@ -151,10 +151,10 @@
             </objects>
             <point key="canvasLocation" x="1052" y="789"/>
         </scene>
-        <!--Table Memes View Controller-->
+        <!--Memes-->
         <scene sceneID="AK1-NI-NWZ">
             <objects>
-                <viewController id="biX-ed-uXB" customClass="TableMemesViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Memes" id="biX-ed-uXB" customClass="TableMemesViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vIS-Oa-TqI"/>
                         <viewControllerLayoutGuide type="bottom" id="BPH-2U-si4"/>
@@ -219,7 +219,7 @@
                             <constraint firstItem="BPH-2U-si4" firstAttribute="top" secondItem="12q-l6-wXd" secondAttribute="bottom" id="sSQ-bt-F5N"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iC6-7I-HHM">
+                    <navigationItem key="navigationItem" title="Memes" id="iC6-7I-HHM">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EBj-6H-2nQ">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" identifier="toMemeEditor" id="MjN-X2-qP6"/>
@@ -252,10 +252,10 @@
             </objects>
             <point key="canvasLocation" x="66" y="-280"/>
         </scene>
-        <!--Edit Meme View Controller-->
+        <!--Editor-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="EditMemeViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Editor" id="BYZ-38-t0r" customClass="EditMemeViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -281,7 +281,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqx-DU-DnN">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
-                                    <navigationItem id="V6y-xO-G9J">
+                                    <navigationItem title="Editor" id="V6y-xO-G9J">
                                         <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="action" id="h7C-vQ-oDc">
                                             <connections>
                                                 <action selector="actionShare:" destination="BYZ-38-t0r" id="myn-xB-VMY"/>
@@ -374,10 +374,10 @@
             </objects>
             <point key="canvasLocation" x="2077" y="9"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--View-->
         <scene sceneID="NuY-7n-uqP">
             <objects>
-                <viewController id="Gc6-wQ-5eh" customClass="DetailViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="View" id="Gc6-wQ-5eh" customClass="DetailViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ncB-PP-fAy"/>
                         <viewControllerLayoutGuide type="bottom" id="tJc-zp-6KS"/>
@@ -413,7 +413,7 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Dn-k2-qbi"/>
-        <segue reference="Eg5-ag-Ssg"/>
+        <segue reference="h3C-qP-vdA"/>
+        <segue reference="MjN-X2-qP6"/>
     </inferredMetricsTieBreakers>
 </document>
