@@ -90,17 +90,15 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
     
     //MARK: Picker
     @IBAction func actionPickImage(sender: AnyObject) {
-        pickImageAux(sender)
+        pickImageAux(sender,source:UIImagePickerControllerSourceType.PhotoLibrary)
     }
     @IBAction func actionPickImageCamera(sender: AnyObject) {
-        pickImageAux(sender,fromCamera:true)
+        pickImageAux(sender,source:UIImagePickerControllerSourceType.Camera)
     }
-    func pickImageAux(sender: AnyObject, fromCamera: Bool = false){
+    func pickImageAux(sender: AnyObject, source:UIImagePickerControllerSourceType){
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
-        if (fromCamera){
-            pickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        }
+        pickerController.sourceType = source
         presentViewController(pickerController, animated: true, completion: nil)
     }
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
