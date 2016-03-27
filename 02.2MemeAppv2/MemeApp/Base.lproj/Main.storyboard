@@ -264,11 +264,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ggd-xS-T9J">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ggd-xS-T9J">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="yVO-PE-KGe" appends="YES" id="di4-01-sBd"/>
+                                    <outletCollection property="gestureRecognizers" destination="ngw-8O-60z" appends="YES" id="BeI-vS-mYq"/>
                                 </connections>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d5G-S0-fs7">
@@ -325,6 +325,7 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Ggd-xS-T9J" secondAttribute="trailing" id="14u-nq-nHb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="30t-82-0n0" secondAttribute="trailing" constant="-20" id="7Tt-DJ-aG6"/>
@@ -358,9 +359,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <pinchGestureRecognizer id="yVO-PE-KGe">
+                <pinchGestureRecognizer id="ngw-8O-60z">
                     <connections>
-                        <action selector="actionGesturePinch:" destination="BYZ-38-t0r" id="MRj-0w-CFk"/>
+                        <action selector="actionGesturePinch:" destination="BYZ-38-t0r" id="SPr-Jc-WUq"/>
                     </connections>
                 </pinchGestureRecognizer>
             </objects>

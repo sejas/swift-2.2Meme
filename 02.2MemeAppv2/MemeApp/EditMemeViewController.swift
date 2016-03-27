@@ -192,8 +192,22 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     //MARK: Gestures
-    @IBAction func actionGesturePinch(sender: AnyObject) {
-
+    @IBAction func actionGesturePinch(sender: UIPinchGestureRecognizer) {
+//        if let sender = sender as? UIPinchGestureRecognizer {
+//        imgChoosed.transform = CGAffineTransformScale(imgChoosed.transform, sender.scale, sender.scale)
+          sender.scale = 1
+//        }
+        if let view = sender.view {
+            view.transform = CGAffineTransformScale(view.transform,
+                sender.scale, sender.scale)
+            sender.scale = 1
+        }
+    }
+    @IBAction func actionGestureRotate(sender : UIRotationGestureRecognizer) {
+        if let view = sender.view {
+            view.transform = CGAffineTransformRotate(view.transform, sender.rotation)
+            sender.rotation = 0
+        }
     }
 
 }
