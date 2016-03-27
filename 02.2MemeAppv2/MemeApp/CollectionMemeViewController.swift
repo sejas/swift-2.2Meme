@@ -19,19 +19,30 @@ class CollectionMemeViewController: UIViewController, UICollectionViewDataSource
     //MARK: Init
     override func viewDidLoad() {
         super.viewDidLoad()
-        initFlowLayout()
         collection.dataSource = self
         collection.delegate = self
     }
-    func initFlowLayout() {
-        let space:CGFloat = 3.0
-        let dimension = (self.view.frame.size.width - ( 2 * space )) / 3.0
-        flowLayout.minimumInteritemSpacing = space
-        flowLayout.minimumLineSpacing = space
-        flowLayout.itemSize = CGSizeMake(dimension, dimension*1.5)
-    }
     override func viewWillAppear(animated: Bool) {
         collection.reloadData()
+        //Suscribe to orientation change
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "orientationChanged", name: UIDeviceOrientationDidChangeNotification, object: nil)
+        initFlowLayout()
+    }
+    override func viewWillDisappear(animated: Bool) {
+        //Unsuscribe to orientation change
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIDeviceOrientationDidChangeNotification, object: nil)
+    }
+    //Set 3 cells per row
+    func initFlowLayout() {
+        let space:CGFloat = 3.0
+        let dimension = (self.view.bounds.size.width - ( 2 * space )) / 3.0
+        print("dimension: \(dimension), orientation: \(UIDevice.currentDevice().orientation.isPortrait), width: \(self.view.bounds.size.width)")
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSizeMake(dimension, dimension*1.2)
+    }
+    func orientationChanged() {
+        initFlowLayout()
     }
     
     
