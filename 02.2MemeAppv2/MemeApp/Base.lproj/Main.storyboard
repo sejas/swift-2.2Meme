@@ -269,6 +269,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="ngw-8O-60z" appends="YES" id="BeI-vS-mYq"/>
+                                    <outletCollection property="gestureRecognizers" destination="iqY-oa-bU7" appends="YES" id="69D-H8-Lw2"/>
                                 </connections>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d5G-S0-fs7">
@@ -364,6 +365,11 @@
                         <action selector="actionGesturePinch:" destination="BYZ-38-t0r" id="SPr-Jc-WUq"/>
                     </connections>
                 </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="iqY-oa-bU7">
+                    <connections>
+                        <action selector="actionGestureRotate:" destination="BYZ-38-t0r" id="SeI-lF-6bI"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2077" y="9"/>
         </scene>
