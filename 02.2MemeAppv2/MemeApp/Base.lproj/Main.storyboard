@@ -33,7 +33,7 @@
         <scene sceneID="eZI-J6-EXc">
             <objects>
                 <navigationController id="A07-6c-ZvK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection" id="IqS-qh-WBK"/>
+                    <tabBarItem key="tabBarItem" title="Collection" image="collection_30x30" id="IqS-qh-WBK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mfw-nL-58P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -60,7 +60,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qBX-Sy-klT">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6ZV-G0-qhw">
                                     <size key="itemSize" width="220" height="240"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -96,6 +96,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="8jZ-g6-GEo" firstAttribute="top" secondItem="IhW-0m-Cpw" secondAttribute="bottom" constant="13" id="D4P-qI-PFn"/>
                                             <constraint firstItem="Oy5-JF-ZiF" firstAttribute="leading" secondItem="8jZ-g6-GEo" secondAttribute="leading" id="F1G-nn-5Du"/>
@@ -238,7 +239,7 @@
         <scene sceneID="pcN-LL-Iqs">
             <objects>
                 <navigationController id="DUK-LX-4JA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" id="mXI-6c-8kI"/>
+                    <tabBarItem key="tabBarItem" title="List" image="table_30x30" id="mXI-6c-8kI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nMH-NU-BCz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -390,7 +391,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="collection_30x30" width="30" height="30"/>
         <image name="meme-face" width="430" height="540"/>
+        <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4Dn-k2-qbi"/>

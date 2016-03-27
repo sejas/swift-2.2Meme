@@ -47,8 +47,8 @@ class CollectionMemeViewController: UIViewController, UICollectionViewDataSource
         return cell
     }
     //MARK: Segues
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        collection.deselectItemAtIndexPath(indexPath, animated: true)
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        collectionView.deselectItemAtIndexPath(indexPath, animated: true)
         performSegueWithIdentifier("toMemeDetail", sender: indexPath.row)
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
