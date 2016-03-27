@@ -263,7 +263,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ggd-xS-T9J">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ggd-xS-T9J">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d5G-S0-fs7">
@@ -367,8 +367,22 @@
                     <view key="view" contentMode="scaleToFill" id="dlA-qd-8dp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A0g-XI-GPf">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A0g-XI-GPf" firstAttribute="leading" secondItem="dlA-qd-8dp" secondAttribute="leading" id="YyF-Wb-6UD"/>
+                            <constraint firstItem="tJc-zp-6KS" firstAttribute="top" secondItem="A0g-XI-GPf" secondAttribute="bottom" id="kQq-Gk-YRa"/>
+                            <constraint firstAttribute="trailing" secondItem="A0g-XI-GPf" secondAttribute="trailing" id="po7-rp-7jl"/>
+                            <constraint firstItem="A0g-XI-GPf" firstAttribute="top" secondItem="ncB-PP-fAy" secondAttribute="bottom" id="zVA-6q-guO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgMeme" destination="A0g-XI-GPf" id="wDl-5F-jbN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSx-Vr-ssU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

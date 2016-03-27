@@ -24,30 +24,29 @@ class TableMemesViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     override func viewWillAppear(animated: Bool) {
-        print("memes",memes)
         table.reloadData()
     }
     
     //MARK: Table
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("numberOfRowsInSection\(memes.count)")
         return memes.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = tableView.cellForRowAtIndexPath(indexPath) as! TableMemesTableViewCell
         let cell = tableView.dequeueReusableCellWithIdentifier("memeCell") as! TableMemesTableViewCell
         cell.imgMeme.image = memes[indexPath.row].memeImg
         cell.lblTitle.text = memes[indexPath.row].textTop
         return cell
     }
+    //MARK: Segues
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         table.deselectRowAtIndexPath(indexPath, animated: true)
+        performSegueWithIdentifier("toMemeDetail", sender: indexPath.row)
     }
-    
-    //MARK: Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if(""==segue.identifier){
-//        }
+        if("toMemeDetail" == segue.identifier){
+            let detail = segue.destinationViewController as! DetailViewController
+            detail.meme = memes[sender as! Int]
+        }
     }
 
 }

@@ -46,7 +46,16 @@ class CollectionMemeViewController: UIViewController, UICollectionViewDataSource
         cell.lblBottom.text = memes[indexPath.row].textBottom
         return cell
     }
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    //MARK: Segues
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         collection.deselectItemAtIndexPath(indexPath, animated: true)
+        performSegueWithIdentifier("toMemeDetail", sender: indexPath.row)
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if("toMemeDetail" == segue.identifier){
+            let detail = segue.destinationViewController as! DetailViewController
+            detail.meme = memes[sender as! Int]
+        }
+    }
+    
 }
