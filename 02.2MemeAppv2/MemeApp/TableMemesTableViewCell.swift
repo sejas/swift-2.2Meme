@@ -10,7 +10,7 @@ import UIKit
 
 class TableMemesTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var imgMeme: UIView!
+    @IBOutlet weak var imgMeme: UIImage!
     @IBOutlet weak var lblTitle: UILabel!
     
     override func awakeFromNib() {

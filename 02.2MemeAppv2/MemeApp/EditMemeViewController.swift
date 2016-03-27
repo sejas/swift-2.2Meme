@@ -74,6 +74,8 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         initTextField(tfTop)
         initTextField(tfBottom)
         imgChoosed.image = UIImage()
+        //Hide modal (us)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     //ChangeFont Action
