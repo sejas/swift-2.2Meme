@@ -20,7 +20,8 @@ class CollectionMemeViewController: UIViewController, UICollectionViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         initFlowLayout()
-        
+        collection.dataSource = self
+        collection.delegate = self
     }
     func initFlowLayout() {
         let space:CGFloat = 3.0

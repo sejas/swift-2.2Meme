@@ -143,6 +143,7 @@
                     <connections>
                         <outlet property="collection" destination="qBX-Sy-klT" id="fVn-eg-B9Y"/>
                         <outlet property="flowLayout" destination="6ZV-G0-qhw" id="0aF-l2-DKS"/>
+                        <segue destination="Gc6-wQ-5eh" kind="show" identifier="toMemeDetail" id="Eg5-ag-Ssg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFK-EH-mEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -226,6 +227,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="12q-l6-wXd" id="tBu-dn-LCH"/>
+                        <segue destination="Gc6-wQ-5eh" kind="show" identifier="toMemeDetail" id="h3C-qP-vdA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5D-Vi-BrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,13 +354,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="405"/>
+            <point key="canvasLocation" x="2077" y="9"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="NuY-7n-uqP">
+            <objects>
+                <viewController id="Gc6-wQ-5eh" customClass="DetailViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ncB-PP-fAy"/>
+                        <viewControllerLayoutGuide type="bottom" id="tJc-zp-6KS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dlA-qd-8dp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSx-Vr-ssU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2094" y="775"/>
         </scene>
     </scenes>
     <resources>
         <image name="meme-face" width="430" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MjN-X2-qP6"/>
+        <segue reference="4Dn-k2-qbi"/>
+        <segue reference="Eg5-ag-Ssg"/>
     </inferredMetricsTieBreakers>
 </document>
