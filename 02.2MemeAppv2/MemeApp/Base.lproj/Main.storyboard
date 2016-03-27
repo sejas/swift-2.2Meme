@@ -142,6 +142,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collection" destination="qBX-Sy-klT" id="fVn-eg-B9Y"/>
+                        <outlet property="flowLayout" destination="6ZV-G0-qhw" id="0aF-l2-DKS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFK-EH-mEs" userLabel="First Responder" sceneMemberID="firstResponder"/>

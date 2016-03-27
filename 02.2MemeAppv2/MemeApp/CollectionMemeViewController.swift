@@ -9,7 +9,8 @@
 import UIKit
 
 class CollectionMemeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
+
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var collection: UICollectionView!
     var memes: [Meme] {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
@@ -18,7 +19,15 @@ class CollectionMemeViewController: UIViewController, UICollectionViewDataSource
     //MARK: Init
     override func viewDidLoad() {
         super.viewDidLoad()
+        initFlowLayout()
         
+    }
+    func initFlowLayout() {
+        let space:CGFloat = 3.0
+        let dimension = (self.view.frame.size.width - ( 2 * space )) / 3.0
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSizeMake(dimension, dimension*1.5)
     }
     override func viewWillAppear(animated: Bool) {
         collection.reloadData()
