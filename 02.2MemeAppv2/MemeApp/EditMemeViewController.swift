@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var toolbar: UIToolbar!
@@ -108,6 +108,9 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
             imgChoosed.image = image
             //Enable the share button 
             btnShare.enabled = true
+            //We reset the position of the background image
+            //Because maybe the user has modified the previous image
+            resetScaleAndRotation()
         }else{
             print("Error, while returning imagePicker didFinishPickingMediaWithInfo",info)
         }
@@ -192,6 +195,11 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     //MARK: Gestures
+    //I've learnt about gestures in this post https://www.raywenderlich.com/76020/using-uigesturerecognizer-with-swift-tutorial
+    func gestureRecognizer(_: UIGestureRecognizer,
+        shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer) -> Bool {
+            return true
+    }
     @IBAction func actionGesturePinch(sender: UIPinchGestureRecognizer) {
         if let view = sender.view {
             view.transform = CGAffineTransformScale(view.transform,
@@ -204,6 +212,11 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
             view.transform = CGAffineTransformRotate(view.transform, sender.rotation)
             sender.rotation = 0
         }
+    }
+    func resetScaleAndRotation(){
+        imgChoosed.transform = CGAffineTransformScale(view.transform,
+            1, 1)
+        imgChoosed.transform = CGAffineTransformRotate(view.transform, 0)
     }
 
 }

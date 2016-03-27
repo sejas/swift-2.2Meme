@@ -363,6 +363,7 @@
                 <pinchGestureRecognizer id="ngw-8O-60z">
                     <connections>
                         <action selector="actionGesturePinch:" destination="BYZ-38-t0r" id="SPr-Jc-WUq"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="zDh-85-dh6"/>
                     </connections>
                 </pinchGestureRecognizer>
                 <rotationGestureRecognizer id="iqY-oa-bU7">
