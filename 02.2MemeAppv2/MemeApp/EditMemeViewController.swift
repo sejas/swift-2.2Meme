@@ -10,7 +10,6 @@ import UIKit
 
 class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var toolbar: UIToolbar!
 
@@ -190,6 +189,11 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
     func unsubscribeFromKeyboardNotifications() {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    //MARK: Gestures
+    @IBAction func actionGesturePinch(sender: AnyObject) {
+
     }
 
 }
