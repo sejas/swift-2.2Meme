@@ -285,25 +285,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqx-DU-DnN">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Editor" id="V6y-xO-G9J">
-                                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="action" id="h7C-vQ-oDc">
-                                            <connections>
-                                                <action selector="actionShare:" destination="BYZ-38-t0r" id="myn-xB-VMY"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="Yx6-Xy-Tvz">
-                                            <connections>
-                                                <action selector="actionCancel:" destination="BYZ-38-t0r" id="sd3-iz-21P"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30t-82-0n0">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="OPy-F9-qCJ"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="D9D-S0-5Gr"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hLE-WF-4We"/>
@@ -331,6 +317,26 @@
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqx-DU-DnN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="BmN-ZE-QaR"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Editor" id="V6y-xO-G9J">
+                                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="action" id="h7C-vQ-oDc">
+                                            <connections>
+                                                <action selector="actionShare:" destination="BYZ-38-t0r" id="myn-xB-VMY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="Yx6-Xy-Tvz">
+                                            <connections>
+                                                <action selector="actionCancel:" destination="BYZ-38-t0r" id="sd3-iz-21P"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
