@@ -211,6 +211,7 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
             sender.rotation = 0
         }
     }
+    
     func resetScaleAndRotation(){
         imgChoosed.transform = CGAffineTransformScale(view.transform,
             1, 1)
